@@ -9,7 +9,7 @@
 
 puts "Hello, world!"
 puts "Stands for put string maybe?"
-p "No parens for function calls, does this also mean no parens for conditionals?"
+p "No parens for some function calls, does this also mean no parens for conditionals?"
 
 if true
   p "Yep"
@@ -36,3 +36,27 @@ puts "Multiple parameters to puts are not concatenated, rather printed individua
 puts "Very similar to python, for loop syntax, typecasting syntax, probably more."
 
 puts "Some powerful loop syntax now that I'm researching it online."
+
+# function syntax identical to python
+def my_custom_power(number, power)
+  if power == 1
+    return number
+  end # this end is necessary
+  if power == 0
+    return 1
+  end
+  number * my_custom_power(number, power - 1)# interesting, this is interpreted as a return statement, but doesn't actually "return"
+end
+
+puts my_custom_power(2, 10)
+
+
+
+return
+=begin
+This is how multiline comments work
+Due to the syntax, it seems to be less used than the hastag
+for comments, likely very useful for commenting out portions
+of code that are causing erros due to being unfinished?
+=end
+puts "You can return early from the program"
